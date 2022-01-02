@@ -1,5 +1,73 @@
 package tecnicasDeProgamacao;
 
+//	Fa√ßa uma calculadora especial que tenha as opera√ß√µes abaixo implementadas.
+//	Sua calculadora dever√° ser organizada inteiramente com fun√ß√µes.
+//	Como entrada a calculadora dever√° receber vetores (conforme cada item abaixo)
+//	de n√∫meros inteiros e retornar a resposta para cada opera√ß√£o.
+//	Obs: A entrada de par√¢metros das fun√ß√µes (no caso os vetores passados como
+//	par√¢metros) e retorno de cada fun√ß√£o faz parte da modelagem das fun√ß√µes
+//	implementas.
+//	Voc√™ deve popular os vetores que ser√£o utilizados em cada item (1 a 22). Para
+//	gerar os n√∫meros de forma aleat√≥ria voc√™ pode utilizar o exemplo seguinte de
+//	c√≥digo que gera n√∫meros aleat√≥rios entre x e y:
+//	int x=30
+//	int y=150;
+//	
+//	int n = (int)((Math.random() * y) - x);
+//	
+//	1) Pesquisa: retornar se um dado elemento est√° dentro do vetor e retornar sua
+//	posi√ß√£o no vetor caso esteja;
+//	2) Pesquisa por √≠ndice: retornar o elemento pertencente ao dado √≠ndice
+//	informado do vetor;
+//	3) Separa√ß√£o: retornar dois vetores um apenas com n√∫meros positivos e outro
+//	apenas com n√∫meros negativos;
+//	4) Somat√≥rio: retornar a soma de todos elementos do vetor;
+//	5) Produto: retornar a multiplica√ß√£o de todos elementos do vetor;
+//	6) Produto escala: retornar o produto escalar de dois vetores, para calcular o
+//	produto escalar utilize a forma seguinte:
+//	x1 ‚àó y1 + x2 ‚àó y2 + ... + xn ‚àó yn
+//	7) Completa com zero: um n√∫mero pertencente ao vetor deve ser informado.
+//	Retornar o vetor atualizado para que todos os elementos depois da posi√ß√£o
+//	do n√∫mero informado seja preenchido com zero;
+//	Exemplo: [1,2,5,6,7]
+//	N√∫mero informado: 5
+//	Resposta: [1,2,0,0,0]
+//	
+//	8) Quadrado: retornar o quadrado dos componentes do vetor, armazenando o
+//	resultado em outro vetor;
+//	9) M√©dia: retornar a m√©dia dos elementos do vetor;
+//	10) Max: retornar o maior elemento do vetor;
+//	11) Min: retornar o menor elemento do vetor;
+//	12) Moda unimodal: retornar o elemento que mais aparece no vetor;
+//	13) Mediana: retornar o elemento que separa a metade maior e a metade
+//	menor no vetor;
+//	14) Desvio padr√£o: retornar o desvio padr√£o de um vetor m e a m√©dia do
+//	vetor e n√∫meros de elementos do vetor;
+//	
+//	15) Uni√£o: s√£o informados dois vetores e os vetores dever√£o ser unidos em
+//	apenas um vetor;
+//	Ex: [1,2,3] [4,5] [1,2,3,4,5]
+//	16) Invers√£o: retornar um vetor de ordem inversa. Desta forma, o primeiro
+//	elemento passa ser o √∫ltimo elemento do vetor, o segundo elemento passa
+//	ser o pen√∫ltimo, assim, sucessivamente;
+//	17) Interse√ß√£o: s√£o informados dois vetores e os elementos pertencentes
+//	nos dois vetores dever√£o ser retornados;
+//	18) Diferen√ßa-A: s√£o informados dois vetores (A e B) e o programa dever√°
+//	mostrar todos elementos que est√£o no vetor A e n√£o ent√£o no vetor B;
+//	19) Ordena√ß√£o: ordenar o elementos do vetor de forma ascendente;
+//	20) Primos: retornar os elementos do vetor que s√£o primos;
+//	21) Fibonacci: retornar os elementos do vetor que pertencem a s√©rie
+//	Fibonacci: F(n) = F(n-1) + F(n-2);
+//	22) Agrupamento: deve ser informado um n√∫mero de agrupamento desejado
+//	e os elementos devem ser agrupado conforme o n√∫mero de agrupamento
+//	informado;
+//	Exemplo com dois grupos: Os elementos do vetor dever√£o ser ordenados
+//	de forma ascendente. O programa dever√° informar quais s√£o os
+//	elementos da primeira parte do vetor e quais s√£o os elementos da
+//	segunda parte do vetor.
+
+
+
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -11,7 +79,7 @@ public class lista02 {
 		}
 	}
 
-	// Quest„o 01
+	// Quest√£o 01
 	public static int pesquisaVetor(int vetor[], int numeroPesquisado) {	
 		boolean achou = false;
 		int posicaoAchado = -12345;
@@ -25,19 +93,19 @@ public class lista02 {
 		}
 
 		if (achou) {
-			System.out.println("O n˙mero pesquisado est· na posiÁ„o " + (posicaoAchado + 1));
+			System.out.println("O n√∫mero pesquisado est√° na posi√ß√£o " + (posicaoAchado + 1));
 		} else {
-			System.out.println("O n˙mero pesquisado n„o est· no vetor.");
+			System.out.println("O n√∫mero pesquisado n√£o est√° no vetor.");
 		}
 		return posicaoAchado;
 	}
 
-	// Quest„o 02
+	// Quest√£o 02
 	public static int pesquisaIndice(int vetor[], int indicePesquisado) {
 		return vetor[indicePesquisado];
 	}
 
-	// Quest„o 03
+	// Quest√£o 03
 	public static void separacaoVetor(int vetor[]) {
 		int quantidadePositivo = 0, quantidadeNegativo = 0;
 		for (int i = 0; i < vetor.length; i++) {
@@ -67,7 +135,7 @@ public class lista02 {
 		System.out.print("Vetor negativo: "+  Arrays.toString(vetorNegativo));
 	}
 
-	// Quest„o 04
+	// Quest√£o 04
 	public static int somatorioVetor(int vetor[]) {
 		int soma = 0;
 		for (int i = 0; i < vetor.length; i++) {
@@ -76,7 +144,7 @@ public class lista02 {
 		return soma;
 	}
 
-	// Quest„o 05
+	// Quest√£o 05
 	public static long produtorioVetor(int vetor[]) {
 		long produto = 1;
 		for (int i = 0; i < vetor.length; i++) {
@@ -85,7 +153,7 @@ public class lista02 {
 		return produto;
 	}
 
-	// Quest„o 06
+	// Quest√£o 06
 	public static long produtoEscalar(int vetor1[], int vetor2[]) {
 		long produtoEscalar = 0;
 		for (int i = 0; i < vetor1.length; i++) {
@@ -94,7 +162,7 @@ public class lista02 {
 		return produtoEscalar;
 	}
 
-	// Quest„o 07
+	// Quest√£o 07
 	public static void completaComZero(int vetor[]) {
 		int vetorCopia[] = new int[10];
 		for (int i = 0; i < vetor.length; i++) {
@@ -103,7 +171,7 @@ public class lista02 {
 
 		Scanner ler = new Scanner(System.in);
 		int numero;
-		System.out.println("Digite um Ìndice do vetor para completar com zeros todos os valores posteriores a ele:");
+		System.out.println("Digite um √≠ndice do vetor para completar com zeros todos os valores posteriores a ele:");
 		numero = ler.nextInt();
 		int posicaoNumero = 0;
 
@@ -117,20 +185,20 @@ public class lista02 {
 			vetorCopia[i] = 0;
 		}
 
-		System.out.println("O nosso vetor apÛs alterado È: "+  Arrays.toString(vetorCopia));
+		System.out.println("O nosso vetor ap√≥s alterado √©: "+  Arrays.toString(vetorCopia));
 	}
 
-	// Quest„o 08
+	// Quest√£o 08
 	public static void quadradoVetor(int vetor[]) {
 
 		int vetor2[] = new int[10];
 		for (int i = 0; i < vetor.length; i++) {
 			vetor2[i] = vetor[i] * vetor[i];
 		}
-		System.out.println("O vetor com componentes ao quadrado È: "+  Arrays.toString(vetor2));
+		System.out.println("O vetor com componentes ao quadrado √©: "+  Arrays.toString(vetor2));
 	}
 
-	// Quest„o 09
+	// Quest√£o 09
 	public static double mediaVetor(int vetor[]) {
 		double media = 0;
 		for (int i = 0; i < vetor.length; i++) {
@@ -139,7 +207,7 @@ public class lista02 {
 		return media;
 	}
 
-	// Quest„o 10
+	// Quest√£o 10
 	public static int maximoVetor(int vetor[]) {
 		int maior = vetor[0];
 		for (int i = 1; i < vetor.length; i++) {
@@ -150,7 +218,7 @@ public class lista02 {
 		return maior;
 	}
 
-	// Quest„o 11
+	// Quest√£o 11
 	public static int minimoVetor(int vetor[]) {
 		int menor = vetor[0];
 		for (int i = 1; i < vetor.length; i++) {
@@ -161,9 +229,9 @@ public class lista02 {
 		return menor;
 	}
 
-	// Quest„o 12
+	// Quest√£o 12
 	public static void modaVetor(int vetor[]) {
-		System.out.print("A moda do vetor È: ");
+		System.out.print("A moda do vetor √©: ");
 		int vetorFrequencia[] = new int[vetor.length];
 
 		for (int i = 0; i < vetorFrequencia.length; i++) {
@@ -181,7 +249,7 @@ public class lista02 {
 
 		int maiorFrequencia = maximoVetor(vetorFrequencia);
 		if (maiorFrequencia == 1) {
-			System.out.println("N„o h· moda nesse vetor");
+			System.out.println("N√£o h√° moda nesse vetor");
 		} else {
 			for (int i = 0; i < vetorFrequencia.length; i++) {
 				if (vetorFrequencia[i] == maiorFrequencia) {
@@ -192,7 +260,7 @@ public class lista02 {
 		}
 	}
 
-	// Quest„o 13
+	// Quest√£o 13
 	public static double medianaVetor(int vetor[]) {
 		double mediana = 0;
 		int auxiliar = 0;
@@ -222,7 +290,7 @@ public class lista02 {
 		return mediana;
 	}
 
-	// Quest„o 14
+	// Quest√£o 14
 	public static double desvioPadrao(int vetor[]) {
 		double media = mediaVetor(vetor);
 		double soma = 0;
@@ -234,7 +302,7 @@ public class lista02 {
 		return desvioPadrao;
 	}
 
-	// Quest„o 15
+	// Quest√£o 15
 	public static void uniaoVetor(int vetor1[], int vetor2[]) {
 		int[] vetorConcatenado = new int[vetor1.length + vetor2.length];
 		
@@ -244,7 +312,7 @@ public class lista02 {
 		System.out.println("Vetor unido: " + Arrays.toString(vetorConcatenado));
 	}
 
-	// Quest„o 16
+	// Quest√£o 16
 	public static void inversaoVetor(int vetor[]) {
 		int[] vetorAuxiliar = new int[vetor.length];
 
@@ -252,13 +320,13 @@ public class lista02 {
 			vetorAuxiliar[i] = vetor[vetor.length - 1 - i];
 		}
 
-		System.out.print("O vetor invertido È: " + Arrays.toString(vetorAuxiliar));
+		System.out.print("O vetor invertido √©: " + Arrays.toString(vetorAuxiliar));
 	}
 
-	// Quest„o 17
+	// Quest√£o 17
 	public static void intersecaoVetores(int vetor1[], int vetor2[]) {
 		boolean achouIntersecao = false;
-		System.out.print("A interseÁ„o dos vetores: ");
+		System.out.print("A interse√ß√£o dos vetores: ");
 		
 		for (int i = 0; i < vetor1.length; i++) {
 			int valorAnalisado = vetor1[i];
@@ -271,13 +339,13 @@ public class lista02 {
 		}
 		
 		if (achouIntersecao == false) {
-			System.out.println("N„o h· interseÁ„o!");
+			System.out.println("N√£o h√° interse√ß√£o!");
 		}
 	}
 
-	// Quest„o 18
+	// Quest√£o 18
 	public static void diferencaVetores(int vetor1[], int vetor2[]) {
-		System.out.println("O vetor diferenÁa-A È:");
+		System.out.println("O vetor diferen√ßa-A √©:");
 		for (int i = 0; i < vetor1.length; i++) {
 			int valorAnalisado = vetor1[i];
 			for (int j = 0; j < vetor2.length; j++) {
@@ -292,7 +360,7 @@ public class lista02 {
 		}
 	}
 
-	// Quest„o 19
+	// Quest√£o 19
 	public static void ordenacaoVetor(int vetor[]) {
 		int auxiliar = 0;
 		int vetorOrdenado[] = new int[vetor.length];
@@ -310,13 +378,13 @@ public class lista02 {
 				}
 			}
 		}
-		System.out.print("O vetor ordenado È: "+  Arrays.toString(vetorOrdenado));
+		System.out.print("O vetor ordenado √©: "+  Arrays.toString(vetorOrdenado));
 	}
 
-	// Quest„o 20
+	// Quest√£o 20
 	public static void primosVetor(int vetor[]) {
 		boolean achouPrimo = false;
-		System.out.println("N˙meros primos:");
+		System.out.println("N√∫meros primos:");
 		
 		for (int i = 0; i < vetor.length; i++) {
 			boolean ehPrimo = true;
@@ -331,11 +399,11 @@ public class lista02 {
 			}
 		}
 		if (!achouPrimo) {
-			System.out.println("N„o h· primos nesse vetor!");
+			System.out.println("N√£o h√° primos nesse vetor!");
 		}
 	}
 
-	// Quest„o 21
+	// Quest√£o 21
 	public static int fibo(int n) {
 		if (n < 2) {
 			return n;
@@ -352,7 +420,7 @@ public class lista02 {
 			vetorFibonacci[i] = fibo(i);
 		}
 
-		System.out.println("N˙meros de Fibonacci:");
+		System.out.println("N√∫meros de Fibonacci:");
 		for (int i = 0; i < vetor.length; i++) {
 			int valorAnalisado = vetor[i];
 			for (int j = 0; j < vetorFibonacci.length; j++) {
@@ -364,11 +432,11 @@ public class lista02 {
 		}
 
 		if (!ehFibonacci) {
-			System.out.println("N„o h· n˙meros de Fibonacci nesse vetor!");
+			System.out.println("N√£o h√° n√∫meros de Fibonacci nesse vetor!");
 		}
 	}
 
-	// Quest„o 22
+	// Quest√£o 22
 	public static void agrupamentoVetor(int vetor[], int numero) {
 		int auxiliar = 0;
 		int vetorOrdenado[] = new int[vetor.length];
@@ -388,10 +456,10 @@ public class lista02 {
 		}
 
 		if (vetor.length % numero != 0) {
-			System.out.println("N„o È possÌvel dividir o vetor em " + numero + "grupos");
+			System.out.println("N√£o √© poss√≠vel dividir o vetor em " + numero + "grupos");
 		} else {
 			for (int i = 0; i < numero; i++) {
-				System.out.println("\nA " + (i + 1) + " divis„o È:");
+				System.out.println("\nA " + (i + 1) + " divis√£o √©:");
 				for (int j = ((vetor.length / numero) * (i)); j < ((vetor.length / numero) * (i + 1)); j++) {
 					System.out.print(vetorOrdenado[j]+" ");
 				}System.out.print("\n");
@@ -400,107 +468,107 @@ public class lista02 {
 	}
 
 	public static void main(String[] args) {
-		// inicializaÁ„o
+		// inicializa√ß√£o
 		
 		int vetor[] = new int[10];
 		popularVetor(vetor);
-		System.out.println("O nosso vetor principal È: " + Arrays.toString(vetor) +"\n");
+		System.out.println("O nosso vetor principal √©: " + Arrays.toString(vetor) +"\n");
 		
 		int vetor2[] = new int[10];
 		popularVetor(vetor2);
-		System.out.println("O nosso vetor secund·rio È: " + Arrays.toString(vetor2)+"\n");
+		System.out.println("O nosso vetor secund√°rio √©: " + Arrays.toString(vetor2)+"\n");
 
-		// Quest„o 01
-		System.out.println("Quest„o 01:");
+		// Quest√£o 01
+		System.out.println("Quest√£o 01:");
 		int numeroPesquisado = 5;
 		pesquisaVetor(vetor, numeroPesquisado);
 		System.out.print("\n");
 
-		// Quest„o 02
+		// Quest√£o 02
 		int indicePesquisado = 9;
-		System.out.println("Quest„o 02:\nO n˙mero na posiÁ„o " + indicePesquisado + " È " + pesquisaIndice(vetor, indicePesquisado)+"\n");
+		System.out.println("Quest√£o 02:\nO n√∫mero na posi√ß√£o " + indicePesquisado + " √© " + pesquisaIndice(vetor, indicePesquisado)+"\n");
 
-		// Quest„o 03
-		System.out.println("Quest„o 03:");
+		// Quest√£o 03
+		System.out.println("Quest√£o 03:");
 		separacaoVetor(vetor);
 		System.out.print("\n\n");
 
-		// Quest„o 04
-		System.out.println("Quest„o 04:\nA soma do vetor È " + somatorioVetor(vetor)+"\n");
+		// Quest√£o 04
+		System.out.println("Quest√£o 04:\nA soma do vetor √© " + somatorioVetor(vetor)+"\n");
 
-		// Quest„o 05
-		System.out.println("Quest„o 05:\nO produto do vetor È " + produtorioVetor(vetor)+"\n");
+		// Quest√£o 05
+		System.out.println("Quest√£o 05:\nO produto do vetor √© " + produtorioVetor(vetor)+"\n");
 
-		// Quest„o 06
-		System.out.println("Quest„o 06\nO produto escalar do vetor e vetor2 È " + produtoEscalar(vetor, vetor2)+"\n");
+		// Quest√£o 06
+		System.out.println("Quest√£o 06\nO produto escalar do vetor e vetor2 √© " + produtoEscalar(vetor, vetor2)+"\n");
 
-		// Quest„o 07
-		System.out.println("Quest„o 07:");
+		// Quest√£o 07
+		System.out.println("Quest√£o 07:");
 		completaComZero(vetor);
 		System.out.print("\n");
 
-		// Quest„o 08
-		System.out.println("Quest„o 08:");
+		// Quest√£o 08
+		System.out.println("Quest√£o 08:");
 		quadradoVetor(vetor);
 		System.out.print("\n");
 
-		// Quest„o 09
-		System.out.println("Quest„o 09\nA mÈdia dos componentes do vetor È: " + mediaVetor(vetor)+"\n");
+		// Quest√£o 09
+		System.out.println("Quest√£o 09\nA m√©dia dos componentes do vetor √©: " + mediaVetor(vetor)+"\n");
 
-		// Quest„o 10
-		System.out.println("Quest„o 10:\nO maior n˙mero do vetor È " + maximoVetor(vetor)+"\n");
+		// Quest√£o 10
+		System.out.println("Quest√£o 10:\nO maior n√∫mero do vetor √© " + maximoVetor(vetor)+"\n");
 
-		// Quest„o 11
-		System.out.println("Quest„o 11:\nO menor n˙mero do vetor È " + minimoVetor(vetor)+"\n");
+		// Quest√£o 11
+		System.out.println("Quest√£o 11:\nO menor n√∫mero do vetor √© " + minimoVetor(vetor)+"\n");
 
-		// Quest„o 12
-		System.out.println("Quest„o 12:");
+		// Quest√£o 12
+		System.out.println("Quest√£o 12:");
 		modaVetor(vetor);
 		System.out.print("\n");
 
-		// Quest„o 13
-		System.out.println("Quest„o 13:\nA mediana do vetor È " + medianaVetor(vetor)+"\n");
+		// Quest√£o 13
+		System.out.println("Quest√£o 13:\nA mediana do vetor √© " + medianaVetor(vetor)+"\n");
 
-		// Quest„o 14
-		System.out.println("Quest„o 14:\nO desvio padr„o do vetor È " + desvioPadrao(vetor)+"\n");
+		// Quest√£o 14
+		System.out.println("Quest√£o 14:\nO desvio padr√£o do vetor √© " + desvioPadrao(vetor)+"\n");
 
-		// Quest„o 15
-		System.out.println("Quest„o 15:");
+		// Quest√£o 15
+		System.out.println("Quest√£o 15:");
 		uniaoVetor(vetor, vetor2);
 		System.out.print("\n");
 
-		// Quest„o 16
-		System.out.println("Quest„o 16:");
+		// Quest√£o 16
+		System.out.println("Quest√£o 16:");
 		inversaoVetor(vetor);
 		System.out.print("\n\n");
 
-		// Quest„o 17
-		System.out.println("Quest„o 17:");
+		// Quest√£o 17
+		System.out.println("Quest√£o 17:");
 		intersecaoVetores(vetor, vetor2);
 		System.out.print("\n");
 
-		// Quest„o 18
-		System.out.println("Quest„o 18:");
+		// Quest√£o 18
+		System.out.println("Quest√£o 18:");
 		diferencaVetores(vetor, vetor2);
 		System.out.print("\n\n");
 
-		// Quest„o 19
-		System.out.println("Quest„o 19:");
+		// Quest√£o 19
+		System.out.println("Quest√£o 19:");
 		ordenacaoVetor(vetor);
 		System.out.print("\n\n");
 
-		// Quest„o 20
-		System.out.println("Quest„o 20:");
+		// Quest√£o 20
+		System.out.println("Quest√£o 20:");
 		primosVetor(vetor);
 		System.out.print("\n\n");
 
-		// Quest„o 21
-		System.out.println("Quest„o 21:");
+		// Quest√£o 21
+		System.out.println("Quest√£o 21:");
 		fibonacciVetor(vetor);
 		System.out.print("\n");
 
-		// Quest„o 22
-		System.out.print("Quest„o 22:");
+		// Quest√£o 22
+		System.out.print("Quest√£o 22:");
 		int divisao = 2;
 		agrupamentoVetor(vetor, divisao);
 		System.out.print("\n");

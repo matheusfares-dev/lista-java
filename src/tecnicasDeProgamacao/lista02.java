@@ -103,7 +103,7 @@ public class lista02 {
 
 		Scanner ler = new Scanner(System.in);
 		int numero;
-		System.out.println("Digite um número do vetor para completar com zeros todos os valores posteriores a ele:");
+		System.out.println("Digite um índice do vetor para completar com zeros todos os valores posteriores a ele:");
 		numero = ler.nextInt();
 		int posicaoNumero = 0;
 
